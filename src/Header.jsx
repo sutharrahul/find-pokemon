@@ -4,25 +4,23 @@ import pokeball from "./assets/pokeball-16809.png";
 
 export default function Header() {
   return (
-    <div>
-      <nav className="bg-red-600 ">
-        <div className="px-8 mx-auto max-w-7xl">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex justify-between items-center">
-              <a className="flex" href="/">
-                <img className="w-12 h-12" src={pokeball} alt="pokemonball" />
-              </a>
-              <a className="flex" href="/">
-                <img
-                  className="w-24 h-24 ml-2"
-                  src={pokemonLogo}
-                  alt="pokemonLogo"
-                />
-              </a>
-            </div>
+    <nav className="bg-red-600 sticky top-0 ">
+      <div className="px-8 mx-auto max-w-7xl">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex justify-between items-center">
+            <a className="flex" href="/">
+              <img className="w-12 h-12" src={pokeball} alt="pokemonball" />
+            </a>
+            <a className="flex" href="/">
+              <img
+                className="w-24 h-24 ml-2"
+                src={pokemonLogo}
+                alt="pokemonLogo"
+              />
+            </a>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }

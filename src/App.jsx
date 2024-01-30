@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./components/Modal.jsx";
-import axios, { Axios } from "axios";
 import { fetchPokemonData } from "../service/index.js";
 import PokemonCard from "./PokemonCard.jsx";
 import Button from "./components/Button.jsx";
@@ -34,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Searchbar /> */}
+      <Searchbar />
       <div className="px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {!loading &&
           data?.results?.map(({ name, url }) => (

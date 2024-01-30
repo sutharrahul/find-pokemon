@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-white fixed bottom-0 w-full py-2">
+    <footer className="bg-slate-200 sticky bottom-0 w-full py-1">
       <div className="max-w-screen-xl px-4 mx-auto">
         <div className="pt-4 flex max-w-xs mx-auto justify-around items-center">
           <a
@@ -11,8 +11,8 @@ function Footer() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="30"
+              height="30"
               fill="currentColor"
               className="text-xl transition-colors duration-200 hover:text-gray-800 "
               viewBox="0 0 1792 1792"
@@ -25,8 +25,8 @@ function Footer() {
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 "
           >
             <svg
-              width="20"
-              height="20"
+              width="30"
+              height="30"
               fill="currentColor"
               className="text-xl transition-colors duration-200 hover:text-gray-800 "
               viewBox="0 0 1792 1792"
@@ -36,7 +36,7 @@ function Footer() {
             </svg>
           </a>
         </div>
-        <div className="text-center text-gray-500  pt-10 sm:pt-12 font-light flex items-center justify-center">
+        <div className="text-center text-black pt-2 sm:pt-3 font-light flex items-center justify-center">
           Created by @RahulSuthar
         </div>
       </div>

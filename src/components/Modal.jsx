@@ -1,7 +1,26 @@
 // src/components/Modal.js
 
 import React, { useState } from "react";
-
+const data = {
+  abilities: [
+    {
+      ability: {
+        name: "blaze",
+        url: "https://pokeapi.co/api/v2/ability/66/",
+      },
+      is_hidden: false,
+      slot: 1,
+    },
+    {
+      ability: {
+        name: "solar-power",
+        url: "https://pokeapi.co/api/v2/ability/94/",
+      },
+      is_hidden: true,
+      slot: 3,
+    },
+  ],
+};
 const Modal = ({ showModal, onClose }) => {
   return (
     // The modal backdrop

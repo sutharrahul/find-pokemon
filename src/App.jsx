@@ -32,6 +32,9 @@ function App() {
   function onPrevClick() {
     if (data?.previous) getData(data?.previous);
   }
+  function onCardClose() {
+    setCurrentCardData(null);
+  }
 
   return (
     <div className="App">
@@ -50,7 +53,7 @@ function App() {
       </div>
       {loading && <Loading />}
       {currentCardData && (
-        <Modal onClose={() => setCurrentCardData(null)}>
+        <Modal onClose={onCardClose}>
           <PokeModalCard data={currentCardData} />
         </Modal>
       )}

@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { fetchPokemonData } from "../service";
+import LoadingEffect from "./LoadingEffect";
 
 export default function PokeListCard({ name, url, setModalData }) {
   const [pokeData, setPokeData] = useState();
@@ -37,7 +38,8 @@ export default function PokeListCard({ name, url, setModalData }) {
       className="m-2 flex content-center bg-white shadow-lg rounded-2xl w-72 p-1"
       onClick={setPokiDataForModal}
     >
-      {pokeData && <img src={pokeData?.image} className=" w-24 h-24" />}
+      {pokeData?.image && <img src={pokeData?.image} className="w-24 h-24" />}
+      {!pokeData?.image && <LoadingEffect />}
       <div className="h-full flex flex-col justify-center items-center">
         <p className="text-xl font-medium text-gray-800 capitalize ml-5">
           {name}

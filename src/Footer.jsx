@@ -37,7 +37,8 @@ function Footer() {
           </a>
         </div>
         <div className="text-center text-black pt-2 sm:pt-3 font-light flex items-center justify-center">
-          Created by @RahulSuthar
+          Created by &nbsp;
+          <a href="https://github.com/sutharrahul">@RahulSuthar</a>
         </div>
       </div>
     </footer>

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./components/Modal.jsx";
 import { fetchPokemonData } from "../service/index.js";
-import PokemonCard from "./PokemonCard.jsx";
+import PokeListCard from "./PokeListCard.jsx";
 import Button from "./components/Button.jsx";
 import Header from "./Header.jsx";
 import Searchbar from "./Searchbar.jsx";
 import Footer from "./Footer.jsx";
+import PokeModalCard from "./components/PokeModalCard.jsx";
+import Loading from "./Loading.jsx";
 
 function App() {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
+  const [currentCardData, setCurrentCardData] = useState();
 
   useEffect(() => {
     const url = "https://pokeapi.co/api/v2/pokemon/";
@@ -33,17 +36,24 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Searchbar />
+      {/* <Searchbar /> */}
       <div className="px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {!loading &&
           data?.results?.map(({ name, url }) => (
-            <PokemonCard name={name} url={url} key={name} />
+            <PokeListCard
+              name={name}
+              url={url}
+              key={name}
+              setModalData={setCurrentCardData}
+            />
           ))}
       </div>
-      {loading && (
-        <h1 className="font-medium text-3xl flex justify-center">Loading...</h1>
+      {loading && <Loading />}
+      {currentCardData && (
+        <Modal onClose={() => setCurrentCardData(null)}>
+          <PokeModalCard data={currentCardData} />
+        </Modal>
       )}
-
       <div className="flex justify-center gap-3">
         {data?.previous && <Button label={"Prev"} onClick={onPrevClick} />}
         {data?.next && <Button label={"Next"} onClick={onNextClick} />}

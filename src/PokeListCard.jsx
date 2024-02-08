@@ -35,7 +35,7 @@ export default function PokeListCard({ name, url, setModalData }) {
   }
   return (
     <div
-      className="m-2 flex content-center bg-white shadow-lg rounded-2xl w-72 p-1"
+      className="m-2 flex content-center bg-white shadow-lg rounded-2xl w-72 p-1 transition hover:-translate-y-[-2px] hover:scale-110 duration-300 hover:bg-slate-200"
       onClick={setPokiDataForModal}
     >
       {pokeData?.image && <img src={pokeData?.image} className="w-24 h-24" />}

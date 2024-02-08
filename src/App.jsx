@@ -1,14 +1,14 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Route from "./Route";
+import RouteOutlet from "./RouteOutlet";
 import Home from "./Home";
-import Searchbar from "./Searchbar";
+import Search from "./Search";
 
 export default function App() {
   const appRouter = createBrowserRouter([
     {
       path: "/",
-      element: <Route />,
+      element: <RouteOutlet />,
       children: [
         {
           path: "/",
@@ -16,7 +16,7 @@ export default function App() {
         },
         {
           path: "/Search",
-          element: <Searchbar />,
+          element: <Search />,
         },
       ],
     },

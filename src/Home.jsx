@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./components/Modal.jsx";
-import { fetchPokemonData } from "../service/index.js";
+import { fetchPokemonData } from "./service/index.js";
 import PokeListCard from "./PokeListCard.jsx";
 import Button from "./components/Button.jsx";
 import Header from "./Header.jsx";
@@ -37,7 +37,7 @@ function Home() {
   }
 
   return (
-    <div className="Home">
+    <div className="Home mb-0">
       <div className="px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {!loading &&
           data?.results?.map(({ name, url }) => (

@@ -17,15 +17,13 @@ export default function Header() {
             </a>
             <ul className="flex justify-between gap-6 ml-6 text-lg font-semibold text-slate-50">
               <Link to="/">
-                <li className="transition hover:-translate-y-1 hover:scale-110 duration-300">
-                  Home
-                </li>
+                <li>Home</li>
               </Link>
               <Link to="Search">
-                <li className="flex transition hover:-translate-y-0 hover:scale-110 duration-300">
+                <li className="flex transition ">
                   Search
                   <span
-                    className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
+                    className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-70"
                     id="basic-addon2"
                   >
                     <svg

@@ -22,7 +22,12 @@ function Search() {
   return (
     <div>
       <Searchbar loading={loading} onSearch={onSearch} />
-      <SearchResult data={data} loading={loading} errorMessage={errorMessage} />
+      <SearchResult
+        data={data}
+        loading={loading}
+        errorMessage={errorMessage}
+        setData={setData}
+      />
     </div>
   );
 }

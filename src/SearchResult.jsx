@@ -24,9 +24,9 @@ function SearchResult({ data, loading, errorMessage, setData }) {
 
   return (
     <>
-      <div className="hidden sm:block h-full w-full">
+      <div className="hidden sm:block h-full w-full mt-6">
         <div className="flex justify-between p-10 items-center  ">
-          <div className="flex flex-col capitalize gap-3">
+          <div className="flex flex-col capitalize gap-3 w-[50%]">
             <h1 className="text-6xl font-bold">{data?.name}</h1>
             <div className="text-xl">
               <BadgeList label="Types: " badgeList={data?.types} />
@@ -35,7 +35,9 @@ function SearchResult({ data, loading, errorMessage, setData }) {
               <PokeDetails data={data} />
             </div>
           </div>
-          <PokeImg imageUrl={data?.image} />
+          <div className="w-[40%]">
+            <PokeImg imageUrl={data?.image} />
+          </div>
         </div>
       </div>
       <div className=" sm:hidden">

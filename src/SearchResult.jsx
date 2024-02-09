@@ -1,16 +1,27 @@
 import React from "react";
 import PokeModalCard from "./components/PokeModalCard";
+import SearchResultCard from "./SearchResultCard";
+import LoadingEffect from "./LoadingEffect";
 
-function SearchResult({ data, loading }) {
+function SearchResult({ data, loading, errorMessage }) {
   if (loading) {
-    return <span>Loading...</span>;
+    return (
+      <span className="className=font-medium text-3xl p-5 flex justify-center items-center">
+        <LoadingEffect />
+        Loading...
+      </span>
+    );
   } else if (!data) {
-    return <span>No Data found!</span>;
+    return (
+      <span className="className=font-medium text-3xl p-5 flex justify-center items-center">
+        {errorMessage}
+      </span>
+    );
   }
 
   return (
     <>
-      <PokeModalCard data={data} />
+      <SearchResultCard data={data} />
     </>
   );
 }

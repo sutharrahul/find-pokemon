@@ -1,5 +1,4 @@
 import React from "react";
-import Badge from "./Badge";
 import BadgeList from "./BadgeList";
 import PokeDetails from "./PokeDetails";
 import PokeImg from "./PokeImg";

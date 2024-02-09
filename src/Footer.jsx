@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-slate-200  sticky bottom-0 w-full py-1">
+    <div className="bg-slate-200  bottom-0 w-full py-1">
       <div className="max-w-screen-xl px-4 mx-auto">
         <div className="pt-4 flex max-w-xs mx-auto justify-around items-center">
           <a

@@ -3,9 +3,6 @@ import Modal from "./components/Modal.jsx";
 import { fetchPokemonData } from "./service/index.js";
 import PokeListCard from "./PokeListCard.jsx";
 import Button from "./components/Button.jsx";
-import Header from "./Header.jsx";
-import Searchbar from "./Searchbar.jsx";
-import Footer from "./Footer.jsx";
 import PokeModalCard from "./components/PokeModalCard.jsx";
 import Loading from "./Loading.jsx";
 
@@ -37,8 +34,8 @@ function Home() {
   }
 
   return (
-    <div className="Home mb-0">
-      <div className="px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+    <div className="Home">
+      <div className="px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {!loading &&
           data?.results?.map(({ name, url }) => (
             <PokeListCard
@@ -55,7 +52,7 @@ function Home() {
           <PokeModalCard data={currentCardData} />
         </Modal>
       )}
-      <div className="flex justify-center gap-3">
+      <div className="flex justify-center gap-3 mb-6 mt-6">
         {data?.previous && <Button label={"Prev"} onClick={onPrevClick} />}
         {data?.next && <Button label={"Next"} onClick={onNextClick} />}
       </div>

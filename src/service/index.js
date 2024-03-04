@@ -18,7 +18,8 @@ export function extractPokeInfo(data) {
   };
 }
 
-const creatSearchUrl = (name) => `https://pokeapi.co/api/v2/pokemon/${name}`;
+const creatSearchUrl = (name) =>
+  `https://pokeapi.co/api/v2/pokemon/${name?.toLowerCase()}`;
 
 export async function fetchPokemonDataByName(name) {
   try {

@@ -23,12 +23,15 @@ function Home() {
     setData(data);
     setLoading(false);
   }
+
   function onNextClick() {
     if (data?.next) getData(data?.next);
   }
+
   function onPrevClick() {
     if (data?.previous) getData(data?.previous);
   }
+
   function onCardClose() {
     setCurrentCardData(null);
   }

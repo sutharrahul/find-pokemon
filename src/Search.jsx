@@ -7,6 +7,7 @@ function Search() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState();
   const [errorMessage, setErrorMessage] = useState("");
+
   async function onSearch(name) {
     setLoading(true);
     setErrorMessage("");
